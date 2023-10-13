@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background-color: #0c1445;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.moon{
+    background-image: url(images/Moon.png);
+   background-position: center;
+   background-size: cover;
+    height: 300px;
+    width: 300px;
+    animation: moon 20s ;
+
+}
+span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: inline-block;
+    pointer-events: none;
+    width: 50px;
+    height: 50px;
+    background-image: url(images/star.png);
+    background-position: center;
+    background-size: cover;
+    animation: fall 2s linear forwards    ;
+}
+
+.fixed{
+    width: 50px;
+    height: 50px;
+    background-image: url(images/star.png);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    
+}
+.star-1{
+    top: 2%;
+    animation: bigFall 20s reverse linear forwards;
+}
+.star-2{
+    top: 10%;
+    left: 3%;
+    animation: bigFall 20s reverse linear forwards;
+}
+.star-3{
+    top: 50%;
+    left: 3%;
+    animation: bigFall 20s reverse linear forwards;
+}
+.star-4{
+    top: 50%;
+    left: 30%;
+    animation: bigFall 20s reverse linear forwards;
+}
+.star-5{
+    top: 90%;
+    left: 5%;
+    animation: bigFall 20s reverse linear forwards;
+}
+.star-6{
+    top: 2%;
+    right: 3%;
+    animation: bigFall 20s reverse linear forwards;
+}
+.star-7{
+    top: 50%;
+    right: 3%;
+    animation: bigFall 20s reverse linear forwards;
+}
+.star-8{
+    top: 50%;
+    right: 30%;
+    animation: bigFall 20s reverse linear forwards;
+}
+.star-9{
+    top: 90%;
+    right: 3%;
+    animation: bigFall 20s reverse linear forwards;
+}
+.star-10{
+    top: 90%;
+    right: 50%;
+    animation: bigFall 20s reverse linear forwards;
+}
+
+@keyframes fall {
+    0%{
+        opacity: 1;
+        transform: translate(-50%,-50%);
+        filter: hue-rotate(0deg);
+        
+    }
+    25%{
+        opacity: .75;
+        filter: hue-rotate(90deg);
+        
+    }
+    50%{
+        opacity: .5;
+        filter: hue-rotate(180deg);
+        
+    }
+    75%{
+        opacity: .25;
+        filter: hue-rotate(270deg);
+        
+    }
+    100%{
+        opacity: 0;
+        filter: hue-rotate(360deg);
+        transform: translate(0,1000%);
+
+    }
+    
+}
+@keyframes bigFall {
+    0%{
+        transform: translateY(0);
+        opacity: 1;
+        
+
+    }
+    25%{
+        opacity: .75;
+        
+    }
+    50%{
+        opacity: .50;
+        
+    }
+    75%{
+        opacity: .25;
+
+    }
+    100%{
+   transform: translateY(1000%);
+   opacity: 0;
+
+    }
+    
+}
+
+
+@keyframes moon {
+    
+    0%{
+        
+        
+        transform: translateY(-100%);
+        
+        
+    }
+    25%{
+        
+        
+    }
+    50%{
+        
+        
+    }
+    75%{
+        
+        
+    }
+    100%{
+        
+        transform: translateY(0);
+    
+    }
+    
+}
